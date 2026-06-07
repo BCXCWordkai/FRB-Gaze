@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+title: FRB-Gaze
+message: "If you use this code, please cite the associated Pattern Analysis and Applications paper."
+type: software
+authors:
+  - family-names: "Author"
+    given-names: "First"
+repository-code: "https://github.com/BCXCWordkai/FRB-Gaze"
+license: MIT
