@@ -1,6 +1,6 @@
 # 👁️ FRB-Gaze
 
-Official implementation of **FRB-Gaze: A Face-Guided Reliability-Aware Binocular Network for Gaze Estimation**.
+Official implementation of **FRB-Gaze: Face-Guided Reliability-Aware Binocular Gaze Estimation under Asymmetric Visual Degradation**.
 
 This repository provides the code required to reproduce the experiments reported in the manuscript, including the complete model, data reader, training script, evaluation script, and instructions for preparing the public datasets.
 
@@ -192,7 +192,7 @@ The public datasets used in this study are available from their official dataset
 If you use this code, please cite the associated manuscript:
 
 ```text
-FRB-Gaze: A Face-Guided Reliability-Aware Binocular Network for Gaze Estimation.
+FRB-Gaze: Face-Guided Reliability-Aware Binocular Gaze Estimation under Asymmetric Visual Degradation
 ```
 
 The citation metadata in `CITATION.cff` can be updated after the paper receives a DOI.
