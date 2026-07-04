@@ -1,0 +1,24 @@
+dataset: MPIIFaceGaze
+evaluation_protocol: multi_fold
+metric: mean_angular_error_degrees
+ablation_id: FULL
+checkpoint_root: checkpoints/MPIIFaceGaze
+result_aggregation: average the mean angular error over all folds
+
+folds:
+  - fold: p00
+    test_dir: datasets/MPIIFaceGaze/p00/test
+    checkpoint: checkpoints/MPIIFaceGaze/p00/FRB_Gaze_MPIIFaceGaze_p00_best_ema.pth
+    file_name: FRB_Gaze_MPIIFaceGaze_p00_best_ema.pth
+    size_mb: 81.3
+    sha256: DE5F2BC00A3FE2DF70728F9072C632937608D183F1484D069F48486196EBAC82
+    expected_mean_angular_error_degrees: TODO
+    test_command: >-
+      python test.py --test-dir datasets/MPIIFaceGaze/p00/test
+      --checkpoint checkpoints/MPIIFaceGaze/p00/FRB_Gaze_MPIIFaceGaze_p00_best_ema.pth
+      --batch-size 128
+      --ablation-id FULL
+
+notes:
+  - Repeat this structure for each MPIIFaceGaze subject fold.
+  - Report the average of all fold-level mean angular errors.

@@ -1,0 +1,24 @@
+dataset: RT-GENE
+evaluation_protocol: multi_fold
+metric: mean_angular_error_degrees
+ablation_id: FULL
+checkpoint_root: checkpoints/RT-GENE
+result_aggregation: average the mean angular error over all folds
+
+folds:
+  - fold: fold_01
+    test_dir: datasets/RT-GENE/fold_01/test
+    checkpoint: checkpoints/RT-GENE/fold_01/FRB_Gaze_RT-GENE_fold1_best_ema.pth
+    file_name: FRB_Gaze_RT-GENE_fold1_best_ema.pth
+    size_mb: 81.4
+    sha256: D6254433F9FF45479235301D432E4DBEE18A9059185837B4F162026C2AA8DFAD
+    expected_mean_angular_error_degrees: TODO
+    test_command: >-
+      python test.py --test-dir datasets/RT-GENE/fold_01/test
+      --checkpoint checkpoints/RT-GENE/fold_01/FRB_Gaze_RT-GENE_fold1_best_ema.pth
+      --batch-size 128
+      --ablation-id FULL
+
+notes:
+  - Repeat this structure for each RT-GENE fold.
+  - Report the average of all fold-level mean angular errors.
