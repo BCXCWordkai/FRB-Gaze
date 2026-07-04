@@ -1,0 +1,18 @@
+dataset: RT-GENE
+evaluation_protocol: single_fold
+metric: mean_angular_error_degrees
+ablation_id: FULL
+
+checkpoint:
+  fold: fold_01
+  file_name: FRB_Gaze_RT-GENE_fold1_best_ema.pth
+  local_path: checkpoints/RT-GENE/fold_01/FRB_Gaze_RT-GENE_fold1_best_ema.pth
+  size_mb: 81.4
+  sha256: D6254433F9FF45479235301D432E4DBEE18A9059185837B4F162026C2AA8DFAD
+
+test:
+  test_dir: datasets/RT-GENE/fold_01/test
+  batch_size: 128
+  expected_mean_angular_error_degrees: TODO
+  command: >-
+    python test.py --config config/rt_gene_weights.yaml

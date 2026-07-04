@@ -1,0 +1,20 @@
+dataset: ETH-XGaze
+evaluation_protocol: fixed_train_val_test_split
+metric: mean_angular_error_degrees
+ablation_id: FULL
+
+checkpoint:
+  file_name: FRB_Gaze_ETH-XGaze_best_ema.pth
+  local_path: checkpoints/ETH-XGaze/FRB_Gaze_ETH-XGaze_best_ema.pth
+  size_mb: 90.7
+  sha256: 273195126C45BC1C668B0098FAC6A93C34095646848ED4D433CB36BB4BFFE533
+
+test:
+  test_dir: datasets/ETH-XGaze/test
+  batch_size: 128
+  expected_mean_angular_error_degrees: 3.26
+  command: >-
+    python test.py --test-dir datasets/ETH-XGaze/test
+    --checkpoint checkpoints/ETH-XGaze/FRB_Gaze_ETH-XGaze_best_ema.pth
+    --batch-size 128
+    --ablation-id FULL

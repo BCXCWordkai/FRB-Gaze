@@ -114,36 +114,32 @@ All experiments use seed `42` unless otherwise specified. Use `--ablation-id FUL
 
 ### MPIIFaceGaze
 
-MPIIFaceGaze is evaluated with subject-wise multi-fold validation. Train and test each subject fold separately, then report the average angular error across folds.
+The provided MPIIFaceGaze checkpoint corresponds to subject fold `p00`.
 
 ```bash
 python train.py --train-dir datasets/MPIIFaceGaze/p00/train --val-dir datasets/MPIIFaceGaze/p00/val --save-dir checkpoints/MPIIFaceGaze/p00 --batch-size 128 --epochs 100 --seed 42
-python test.py --test-dir datasets/MPIIFaceGaze/p00/test --checkpoint checkpoints/MPIIFaceGaze/p00/FRB_Gaze_MPIIFaceGaze_best_ema.pth --batch-size 128 --ablation-id FULL
+python test.py --config config/mpiifacegaze_weights.yaml
 ```
-
-
 
 ### RT-GENE
 
-RT-GENE is evaluated with multi-fold validation. Train and test each fold separately, then report the average angular error across folds.
+The provided RT-GENE checkpoint corresponds to `fold_01`.
 
 ```bash
 python train.py --train-dir datasets/RT-GENE/fold_01/train --val-dir datasets/RT-GENE/fold_01/val --save-dir checkpoints/RT-GENE/fold_01 --batch-size 128 --epochs 100 --seed 42
-python test.py --test-dir datasets/RT-GENE/fold_01/test --checkpoint checkpoints/RT-GENE/fold_01/FRB_Gaze_RT-GENE_best_ema.pth --batch-size 128 --ablation-id FULL
+python test.py --config config/rt_gene_weights.yaml
 ```
-
-
 
 ### ETH-XGaze
 
 ```bash
 python train.py --train-dir datasets/ETH-XGaze/train --val-dir datasets/ETH-XGaze/val --save-dir checkpoints/ETH-XGaze --batch-size 128 --epochs 100 --seed 42
-python test.py --test-dir datasets/ETH-XGaze/test --checkpoint checkpoints/ETH-XGaze/FRB_Gaze_ETH-XGaze_best_ema.pth --batch-size 128 --ablation-id FULL
+python test.py --config config/eth_xgaze_weights.yaml
 ```
 
+The manuscript result is around `3.26` degrees.
 
-
-
+More table-level reproduction notes are provided in `docs/reproduce_tables.md`.
 
 ## Backbone Weights
 
