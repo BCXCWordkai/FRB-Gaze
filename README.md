@@ -1,6 +1,6 @@
 # FRB-Gaze
 
-Official implementation of **FRB-Gaze: Face-Guided Reliability-Aware Binocular Gaze Estimation under Asymmetric Visual Degradation**.
+Official implementation of **FRB-Gaze: Reliability-Aware Binocular Gaze Estimation under Asymmetric Visual Degradation**.
 
 This repository contains the model implementation, HDF5 data reader, dataset-format checks, training and evaluation scripts, reproducibility configuration examples, and representative log templates for the experiments reported in the manuscript.
 
