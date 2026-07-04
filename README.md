@@ -118,10 +118,10 @@ MPIIFaceGaze is evaluated with subject-wise multi-fold validation. Train and tes
 
 ```bash
 python train.py --train-dir datasets/MPIIFaceGaze/p00/train --val-dir datasets/MPIIFaceGaze/p00/val --save-dir checkpoints/MPIIFaceGaze/p00 --batch-size 128 --epochs 100 --seed 42
-python test.py --test-dir datasets/MPIIFaceGaze/p00/test --checkpoint checkpoints/MPIIFaceGaze/p00/FRB_Gaze_MPIIFaceGaze_p00_best_ema.pth --batch-size 128 --ablation-id FULL
+python test.py --test-dir datasets/MPIIFaceGaze/p00/test --checkpoint checkpoints/MPIIFaceGaze/p00/FRB_Gaze_MPIIFaceGaze_best_ema.pth --batch-size 128 --ablation-id FULL
 ```
 
-Repeat the commands for each subject fold and average the fold-level results. The manuscript result is around `3.43` degrees.
+
 
 ### RT-GENE
 
@@ -129,10 +129,10 @@ RT-GENE is evaluated with multi-fold validation. Train and test each fold separa
 
 ```bash
 python train.py --train-dir datasets/RT-GENE/fold_01/train --val-dir datasets/RT-GENE/fold_01/val --save-dir checkpoints/RT-GENE/fold_01 --batch-size 128 --epochs 100 --seed 42
-python test.py --test-dir datasets/RT-GENE/fold_01/test --checkpoint checkpoints/RT-GENE/fold_01/FRB_Gaze_RT-GENE_fold1_best_ema.pth --batch-size 128 --ablation-id FULL
+python test.py --test-dir datasets/RT-GENE/fold_01/test --checkpoint checkpoints/RT-GENE/fold_01/FRB_Gaze_RT-GENE_best_ema.pth --batch-size 128 --ablation-id FULL
 ```
 
-Repeat the commands for each fold and average the fold-level results. The manuscript result is around `6.06` degrees.
+
 
 ### ETH-XGaze
 
@@ -141,9 +141,9 @@ python train.py --train-dir datasets/ETH-XGaze/train --val-dir datasets/ETH-XGaz
 python test.py --test-dir datasets/ETH-XGaze/test --checkpoint checkpoints/ETH-XGaze/FRB_Gaze_ETH-XGaze_best_ema.pth --batch-size 128 --ablation-id FULL
 ```
 
-The manuscript result is around `3.26` degrees.
 
-More table-level reproduction notes are provided in `docs/reproduce_tables.md`.
+
+
 
 ## Backbone Weights
 
