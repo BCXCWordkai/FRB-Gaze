@@ -1,6 +1,6 @@
 # FRB-Gaze
 
-Official implementation of **FRB-Gaze: Face-Guided Reliability-Aware Binocular Gaze Estimation under Asymmetric Visual Degradation**.
+Official implementation of **FRB-Gaze: Reliability-Aware Binocular Gaze Estimation under Asymmetric Visual Degradation**.
 
 This repository contains the model implementation, HDF5 data reader, dataset-format checks, training and evaluation scripts, reproducibility configuration examples, and representative log templates for the experiments reported in the manuscript.
 
@@ -120,7 +120,7 @@ python train.py --train-dir datasets/MPIIFaceGaze/train --val-dir datasets/MPIIF
 python test.py --test-dir datasets/MPIIFaceGaze/test --checkpoint checkpoints/MPIIFaceGaze/FRB_Gaze_best.pth --batch-size 128 --ablation-id FULL
 ```
 
-Expected manuscript result: mean angular error around `3.43` degrees.
+
 
 ### RT-GENE
 
@@ -129,7 +129,7 @@ python train.py --train-dir datasets/RT-GENE/train --val-dir datasets/RT-GENE/va
 python test.py --test-dir datasets/RT-GENE/test --checkpoint checkpoints/RT-GENE/FRB_Gaze_best.pth --batch-size 128 --ablation-id FULL
 ```
 
-Expected manuscript result: mean angular error around `6.06` degrees.
+
 
 ### ETH-XGaze
 
@@ -138,7 +138,7 @@ python train.py --train-dir datasets/ETH-XGaze/train --val-dir datasets/ETH-XGaz
 python test.py --test-dir datasets/ETH-XGaze/test --checkpoint checkpoints/ETH-XGaze/FRB_Gaze_best.pth --batch-size 128 --ablation-id FULL
 ```
 
-Expected manuscript result: mean angular error around `3.26` degrees.
+
 
 See `docs/reproduce_tables.md` for the command mapping used to reproduce the main manuscript tables.
 
